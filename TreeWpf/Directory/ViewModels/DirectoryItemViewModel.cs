@@ -55,7 +55,7 @@ namespace TreeWpf.Directory.ViewModels
         /// <summary>
         /// Command to expand this item
         /// </summary>
-        public ICommand ExpandCommand { get; set; }
+        public ICommand ExpandCommand { get; set; } // a type of comand is needed to run the comand that's why we need the relay 
         #endregion
 
         #region Constructor
@@ -70,8 +70,11 @@ namespace TreeWpf.Directory.ViewModels
 
             this.FullPath = fullPath;
             this.Type = type;
+
+            this.ClearChildren();
         }
         #endregion
+        #region Helper Methods
         /// <summary>
         /// Removes the children from the list adding a dummy item 
         /// </summary>
@@ -86,6 +89,7 @@ namespace TreeWpf.Directory.ViewModels
                 this.Children.Add(null);
             }
         }
+        #endregion
 
         /// <summary>
         /// Expands the directory and finds all the children

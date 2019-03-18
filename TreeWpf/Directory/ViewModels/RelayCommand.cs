@@ -5,7 +5,7 @@ using System.Windows.Input;
 namespace TreeWpf.Directory.ViewModels
 {
     /// <summary>
-    /// A basic command that runs an action
+    /// A basic command that runs an action The relay will simply run its function is imported to the constructor
     /// </summary>
     class RelayCommand : ICommand
     {

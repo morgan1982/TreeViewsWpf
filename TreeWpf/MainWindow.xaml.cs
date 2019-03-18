@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using TreeWpf.Directory.ViewModels;
 
 namespace TreeWpf
 {
@@ -23,6 +24,9 @@ namespace TreeWpf
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = new DirectoryStructureViewModel();
+
         }
     }
 }
